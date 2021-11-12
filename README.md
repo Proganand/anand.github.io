@@ -92,7 +92,7 @@
 	mso-pattern:auto;
 	white-space:nowrap;}
 -->
-</style>
+
 </head>
 
 <body>
