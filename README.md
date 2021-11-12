@@ -108,7 +108,7 @@
   <td class=xl6518172 width=64 style='width:48pt'>Volume</td>
   <td class=xl6518172 width=64 style='width:48pt'>Chg%</td>
  </tr>
- <![if supportMisalignedColumns]>
+ 
  <tr height=0 style='display:none'>
   <td width=64 style='width:48pt'></td>
   <td width=64 style='width:48pt'></td>
@@ -118,10 +118,10 @@
   <td width=64 style='width:48pt'></td>
   <td width=64 style='width:48pt'></td>
  </tr>
- <![endif]>
+
 </table>
 
-</div>
+
 
 
 <!----------------------------->
