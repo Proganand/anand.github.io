@@ -5,7 +5,7 @@
 <meta name=ProgId content=Excel.Sheet>
 <meta name=Generator content="Microsoft Excel 12">
 <link rel=File-List href="book4_files/filelist.xml">
-<style id="book4_18172_Styles">
+
 <!--table
 	{mso-displayed-decimal-separator:"\.";
 	mso-displayed-thousand-separator:"\,";}
