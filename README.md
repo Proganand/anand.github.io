@@ -1,10 +1,7 @@
 # anand.github.io
 # 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=ProgId content=Excel.Sheet>
-<meta name=Generator content="Microsoft Excel 12">
-<link rel=File-List href="book4_files/filelist.xml">
+
 
 <!--table
 	{mso-displayed-decimal-separator:"\.";
