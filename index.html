@@ -1,140 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Strings, Loops, Variables, Arrays etc.</title>
- 
-    <link rel="stylesheet" type="text/css" media="screen" href="fontawesome/css/font-awesome.min.css">
-<!--    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>-->
-    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="basicjs.css" >
- 
-</head>
-<body>
- 
-<div class="maincontrolbox">
- 
- 
- 
-    <select class="dropdown" name="state" id="state">
- 
- 
-        <option value="Not Specified" selected>Choose...</option>
-        <option value="California">California</option>
-        <option value="Texas">Texas</option>
-        <option value="Florida">Florida</option>
- 
-    </select>
- 
- 
-    <select class="dropdown" name="California" id="California">
- 
- 
-        <option value="Not Specified" selected>Choose...</option>
-        <option value="Los Angeles">Los Angeles</option>
-        <option value="San Diego">San Diego</option>
- 
- 
-    </select>
- 
-    <select class="dropdown" name="Texas" id="Texas">
- 
- 
-        <option value="Not Specified" selected>Choose...</option>
-        <option value="Austin">Austin</option>
-        <option value="Houston">Houston</option>
-        <option value="Dallas">Dallas</option>
-        <option value="Tyler">Tyler</option>
-        <option value="Plano">Plano</option>
- 
-    </select>
- 
-    <select class="dropdown" name="Florida" id="Florida">
- 
- 
-        <option value="Not Specified" selected>Choose...</option>
-        <option value="Miami">Miami</option>
-        <option value="Orlando">Orlando</option>
-        <option value="Tampa Bay">Tampa Bay</option>
- 
-    </select>
- 
- 
-    <div id="resultbox"></div>
-</div>
- 
- 
- 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
- 
-    // to test if one string contains another string ..
-    $(document).ready(function(){
- 
- 
-        // note the jquery version change ... switch it to .on('change',
-        // remember that in newer versions of jquery the method below should be
-        // $("#state").on('change', function (){  ... but other than that
-        // the two ways ARE EXACTLY THE SAME ...watch my video carefully and
-        // you'll see what i'm referring to .. 
-        $("#state").change(function (){
- 
-            var chosenstate = $("#state").val();
-//            alert(chosenstate);
- 
-            if(chosenstate == "Texas"){
- 
-                $("#Texas").css("display", "block");
-                $("#Florida").css("display", "none");
-                $("#California").css("display", "none");
- 
-            }
- 
-            if(chosenstate == "Florida"){
- 
-                $("#Texas").css("display", "none");
-                $("#Florida").css("display", "block");
-                $("#California").css("display", "none");
- 
-            }
-            if(chosenstate == "California"){
- 
-                $("#Texas").css("display", "none");
-                $("#Florida").css("display", "none");
-                $("#California").css("display", "block");
- 
-            }
- 
-        // ...end dropdown "change" event handler
-        });
- 
- 
- 
- 
- 
- 
- 
-        $("#execute").click(function(){
- 
-            $("#resultbox").text(result);
- 
- 
-            // ...end button execute clickevent handler
-        });
- 
- 
-        // ...end document ready function
-    });
- 
- 
- 
- 
+var stdObject = {
+  "12th": {
+    "PH": ["m1", "m2", "m3", "m4"],
+    "CH": ["m1", "m2", "m3", "m4"],
+    "MT": ["m1", "m2", "m3", "m4", "m5"]    
+  },
+  "11th": {
+     "PH": ["m1", "m2", "m3", "m4"],
+    "CH": ["m1", "m2", "m3", "m4"],
+    "MT": ["m1", "m2", "m3", "m4", "m5"]  
+  },
+
+"10th": {
+    "PH": ["m1", "m2", "m3", "m4"],
+    "CH": ["m1", "m2", "m3", "m4"],
+    "MT": ["m1", "m2", "m3", "m4", "m5"],
+    "BG" : ["m1", "m2", "m3", "m4", "m5"],
+    "SAT": ["m1", "m2", "m3", "m4", "m5"],
+    "MAT": ["m1", "m2", "m3", "m4", "m5"]
+  },
+
+"9th": {
+    "PH": ["m1", "m2", "m3", "m4"],
+    "CH": ["m1", "m2", "m3", "m4"],
+    "MT": ["m1", "m2", "m3", "m4", "m5"],
+    "BG" : ["m1", "m2", "m3", "m4", "m5"],
+    "SAT": ["m1", "m2", "m3", "m4", "m5"],
+    "MAT": ["m1", "m2", "m3", "m4", "m5"]
+  }
+}
+window.onload = function() {
+  var stdSel = document.getElementById("std");
+  var subjectSel = document.getElementById("subject");
+  var moduleSel = document.getElementById("module");
+  for (var x in stdObject) {
+    stdSel.options[stdSel.options.length] = new Option(x, x);
+  }
+  stdSel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    moduleSel.length = 1;
+    subjectSel.length = 1;
+    //display correct values
+    for (var y in stdObject[this.value]) {
+      subjectSel.options[subjectSel.options.length] = new Option(y, y);
+    }
+  }
+  subjectSel.onchange = function() {
+    //empty Chapters dropdown
+    moduleSel.length = 1;
+    //display correct values
+    var z = stdObject[stdSel.value][this.value];
+    for (var i = 0; i < z.length; i++) {
+      moduleSel.options[moduleSel.options.length] = new Option(z[i], z[i]);
+    }
+  }
+}
 </script>
- 
- 
-<script src="bootstrap/js/bootstrap.min.js"></script>
- 
+</head>   
+<body>
+
+<h1>Module Syllabus </h1>
+
+<form name="form1" id="form1" action="/action_page.php">
+Std: <select name="std" id="std">
+    <option value="" selected="selected">Select std</option>
+  </select>
+  <br><br>
+Subject: <select name="subject" id="subject">
+    <option value="" selected="selected">Please select std first</option>
+  </select>
+  <br><br>
+Module: <select name="module" id="module">
+    <option value="" selected="selected">Please select subject first</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">  
+</form>
+
 </body>
 </html>
