@@ -1,85 +1,153 @@
-<!DOCTYPE html>
-<html>
-<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
 var stdObject = {
   "12th": {
-    "PH": ["m1", "m2", "m3", "m4"],
-    "CH": ["m1", "m2", "m3", "m4"],
-    "MT": ["m1", "m2", "m3", "m4", "m5"]    
+ 	"PH-M01":["ELECTROSTATICS, ELECTRIC CURRENT"],
+
+	"PH-M02":["MAGNETISM, ELECTROMAGNETIC INDUCTION "],  
+	"PH-M03":["AC CIRCUITS"], 
+              	"CH-M01":["GEOMETRICAL OPTICS"],
+	"CH-M02":["m1", "m2", "m3", "m4"],  
+	"CH-M03":["m1", "m2", "m3", "m4"],
+            	"MT-M01": ["m1", "m2", "m3", "m4", "m5"],  
+	"MT-M02": ["m1", "m2", "m3", "m4", "m5"],
+	"MT-M03": ["m1", "m2", "m3", "m4", "m5"]      
   },
+
   "11th": {
-     "PH": ["m1", "m2", "m3", "m4"],
-    "CH": ["m1", "m2", "m3", "m4"],
-    "MT": ["m1", "m2", "m3", "m4", "m5"]  
+  	"PH-M01":["m1", "m2", "m3", "m4"],
+	"PH-M02":["m1", "m2", "m3", "m4"],  
+	"PH-M03":["m1", "m2", "m3", "m4"], 
+              	"CH-M01":["m1", "m2", "m3", "m4"],
+	"CH-M02":["m1", "m2", "m3", "m4"],  
+	"CH-M03":["m1", "m2", "m3", "m4"],
+            	"MT-M01": ["m1", "m2", "m3", "m4", "m5"],  
+	"MT-M02": ["m1", "m2", "m3", "m4", "m5"],
+	"MT-M03": ["m1", "m2", "m3", "m4", "m5"]        
   },
 
 "10th": {
-    "PH": ["m1", "m2", "m3", "m4"],
-    "CH": ["m1", "m2", "m3", "m4"],
-    "MT": ["m1", "m2", "m3", "m4", "m5"],
-    "BG" : ["m1", "m2", "m3", "m4", "m5"],
-    "SAT": ["m1", "m2", "m3", "m4", "m5"],
-    "MAT": ["m1", "m2", "m3", "m4", "m5"]
+    	"PH-M01":["m1", "m2", "m3", "m4"],
+	"PH-M02":["m1", "m2", "m3", "m4"],  
+	"PH-M03":["m1", "m2", "m3", "m4"], 
+              	"CH-M01":["m1", "m2", "m3", "m4"],
+	"CH-M02":["m1", "m2", "m3", "m4"],  
+	"CH-M03":["m1", "m2", "m3", "m4"],
+            	"MT-M01": ["m1", "m2", "m3", "m4", "m5"],  
+	"MT-M02": ["m1", "m2", "m3", "m4", "m5"],
+	"MT-M03": ["m1", "m2", "m3", "m4", "m5"],      
+    	"BG-M01" : ["m1", "m2", "m3", "m4", "m5"],
+	"BG-M02" : ["m1", "m2", "m3", "m4", "m5"],
+	"BG-M03" : ["m1", "m2", "m3", "m4", "m5"],
+    	"SAT-M01": ["m1", "m2", "m3", "m4", "m5"],
+	"SAT-M02": ["m1", "m2", "m3", "m4", "m5"],
+	"SAT-M03": ["m1", "m2", "m3", "m4", "m5"],
+    	"MAT-01": ["m1", "m2", "m3", "m4", "m5"],
+	"MAT-02": ["m1", "m2", "m3", "m4", "m5"],
+	"MAT-03": ["m1", "m2", "m3", "m4", "m5"]
   },
 
 "9th": {
-    "PH": ["m1", "m2", "m3", "m4"],
-    "CH": ["m1", "m2", "m3", "m4"],
-    "MT": ["m1", "m2", "m3", "m4", "m5"],
-    "BG" : ["m1", "m2", "m3", "m4", "m5"],
-    "SAT": ["m1", "m2", "m3", "m4", "m5"],
-    "MAT": ["m1", "m2", "m3", "m4", "m5"]
+    	"PH-M01":["m1", "m2", "m3", "m4"],
+	"PH-M02":["m1", "m2", "m3", "m4"],  
+	"PH-M03":["m1", "m2", "m3", "m4"], 
+              	"CH-M01":["m1", "m2", "m3", "m4"],
+	"CH-M02":["m1", "m2", "m3", "m4"],  
+	"CH-M03":["m1", "m2", "m3", "m4"],
+            	"MT-M01": ["m1", "m2", "m3", "m4", "m5"],  
+	"MT-M02": ["m1", "m2", "m3", "m4", "m5"],
+	"MT-M03": ["m1", "m2", "m3", "m4", "m5"],      
+    	"BG-M01" : ["m1", "m2", "m3", "m4", "m5"],
+	"BG-M02" : ["m1", "m2", "m3", "m4", "m5"],
+	"BG-M03" : ["m1", "m2", "m3", "m4", "m5"],
+    	"SAT-M01": ["m1", "m2", "m3", "m4", "m5"],
+	"SAT-M02": ["m1", "m2", "m3", "m4", "m5"],
+	"SAT-M03": ["m1", "m2", "m3", "m4", "m5"],
+    	"MAT-01": ["m1", "m2", "m3", "m4", "m5"],
+	"MAT-02": ["m1", "m2", "m3", "m4", "m5"],
+	"MAT-03": ["m1", "m2", "m3", "m4", "m5"]
   }
 }
 window.onload = function() {
   var stdSel = document.getElementById("std");
-  var subjectSel = document.getElementById("subject");
-  var moduleSel = document.getElementById("module");
-  for (var x in stdObject) {
+    var moduleSel = document.getElementById("module");
+    var syllabusSel = document.getElementById("syllabus");
+   for (var x in stdObject) {
     stdSel.options[stdSel.options.length] = new Option(x, x);
   }
   stdSel.onchange = function() {
-    //empty Chapters- and Topics- dropdowns
-    moduleSel.length = 1;
-    subjectSel.length = 1;
+    //empty syllabus, subject  and module- dropdowns
+  
+   syllabusSel.length = 1;
+    moduleSel.length = 1;
+    
+    
     //display correct values
     for (var y in stdObject[this.value]) {
-      subjectSel.options[subjectSel.options.length] = new Option(y, y);
+      moduleSel.options[moduleSel.options.length] = new Option(y, y);
     }
   }
-  subjectSel.onchange = function() {
-    //empty Chapters dropdown
-    moduleSel.length = 1;
+  moduleSel.onchange = function() {
+    //empty module and syllabus dropdown
+    
+     syllabusSel.length = 1;
     //display correct values
-    var z = stdObject[stdSel.value][this.value];
+   var z = stdObject[stdSel.value][this.value];
     for (var i = 0; i < z.length; i++) {
-      moduleSel.options[moduleSel.options.length] = new Option(z[i], z[i]);
+      syllabusSel.options[syllabusSel.options.length] = new Option(z[i], z[i]);
     }
   }
-}
+ }
 </script>
-</head>   
-<body>
+<style>
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 50%;
+		}
+		
+		td,
+		th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+		
+		h1 {
+			color: green;
+		}
+	</style>
+</head>
 
-<h1>Module Syllabus </h1>
+<body>
+	<center>
+		<h1>Fiitjee</h1>
+		<h3>
+		Module Syllabus
+		</h3>
+		<b>Search For Module Syllabus:
 
 <form name="form1" id="form1" action="/action_page.php">
 Std: <select name="std" id="std">
     <option value="" selected="selected">Select std</option>
   </select>
-  <br><br>
-Subject: <select name="subject" id="subject">
-    <option value="" selected="selected">Please select std first</option>
-  </select>
+
   <br><br>
 Module: <select name="module" id="module">
-    <option value="" selected="selected">Please select subject first</option>
+    <option value="" selected="selected">Please select std first</option>
   </select>
+
   <br><br>
-  <input type="submit" value="Submit">  
+
+    Syllabus: <select name="syllabus" id="syllabus">
+<option value="" selected="selected">Here It Is</option>
+
+ </select>
+  <br><br>
+  
+  
 </form>
+
 
 </body>
 </html>
